@@ -1,0 +1,10 @@
+---
+layout: post
+title: The story
+date: 2016-06-10 18:50:48 +0200
+image: 2016-06-17-the-story/top.jpg
+excerptimage: 2016-06-17-the-story/excerpt.jpg
+excerpt: "blah"
+---
+
+blah blah

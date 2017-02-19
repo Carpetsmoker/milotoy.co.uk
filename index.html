@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<div class="home">
+	<div class="home-images">
+		<img class="home-image" src="images/milo-hero.jpg" alt="Milo">
+		<div class="arrow-left-row">
+			<img class="home-block" src="images/home1.jpg" alt="Milo">
+			<img class="home-block" src="images/home2.svg.png" alt="Milo">
+			<img class="home-block" src="images/home3.jpg" alt="Milo">
+			<div class="clearfix"></div>
+		</div>
+		<div class="arrow-right-row">
+			<div class="home-block home-block-text">
+				<h2>About</h2>
+				<p><strong>Milo toy keeps young children in touch with an absent loved one</strong></p>
+				<p>Using two way video messages and a treasure hunt game. It’s fun, engaging and a totally interactive
+					experience for the whole family.</p>
+			</div>
+			<img class="home-block" src="images/home4.jpg" alt="Milo">
+			<div class="home-block home-block-text">
+				<h2>Mission</h2>
+				<p><strong>To improve relationships through play and communication</strong></p>
+				<p>The most important way to sustain important family relationships is to encourage better and more regular
+					communication.</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div id="storyboard">
+		<h2>How does Milo work?</h2>
+		<div class="centered-icons">
+			<div class="row">
+				<div class="icon">
+					<strong>01</strong><br>
+					<img src="images/storyboard1.png" alt="Sync Milo device to wifi &amp; Milo website">
+					<br>Sync Milo device to<br>wifi &amp; Milo website
+				</div>
+				<div class="icon">
+					<strong>02</strong><br>
+					<img src="images/storyboard2.png" alt="Connect Milo base unit to mains power">
+					<br>Connect Milo base<br>unit to mains power
+				</div>
+				<div class="icon">
+					<strong>03</strong><br>
+					<img src="images/storyboard3.png" alt="Hide tokens at house &amp; record on website">
+					<br>Hide tokens at house &amp;<br>record on website
+				</div>
+				<div class="icon">
+					<strong>04</strong><br>
+					<img src="images/storyboard4.png" alt="During separation family receives weekly clue">
+					<br>During separation family<br>receives weekly clue
+				</div>
+			</div>
+			<div class="row">
+				<div class="icon">
+					<strong>05</strong><br>
+					<img src="images/storyboard5.png" alt="Family search for hidden token using clue">
+					<br>Family search for<br>hidden token using clue
+				</div>
+				<div class="icon">
+					<strong>06</strong><br>
+					<img src="images/storyboard6.png" alt="Token then slots into Milo’s base unit">
+					<br>Token then slots<br>into Milo’s base unit
+				</div>
+				<div class="icon">
+					<strong>07</strong><br>
+					<img src="images/storyboard7.png" alt="A video message from the absent parent is available">
+					<br>A video message from the<br>absent parent is available
+				</div>
+				<div class="icon">
+					<strong>08</strong><br>
+					<img src="images/storyboard8.png" alt="The family send their own video reply">
+					<br>The family send their<br>own video reply
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div id="story">
+		<div class="text">
+			<h2>Story</h2>
+			<p>The need behind Milo has always been personal. My Dad served in the Army his whole life and most of my
+				childhood was spent apart from him. He’d miss parents evening or events and it was never the same without
+				him there.</p>
+
+			<p>At University I studied Industrial Designed and in final year we were charged with the task to design a
+				product based on a real need. To me the problem of an absent parent was quick to spring to mind. After a
+				long year of research and designing little Milo was born.</p>
+
+			<a href="">Read the story</a>
+		</div>
+		<img src="images/story.jpg" alt="Hannah &amp; Milo">
+		<div class="clearfix"></div>
+	</div>
+
+	<div id="gadget-show">
+		<img src="images/gadget-show.jpg" alt="Gadget show 2016">
+		<div class="text">
+			<h2>Gadget show live<br>highly commended 2016</h2>
+			<p>We were invited to this year’s Gadget Show Live at the NEC in Birmingham. Milo was exhibited in the
+			British Inventor’s Project (BIP) which aims to celebrate innovation and showcase new ideas.
+			The project has been running since 2014 and has only been growing in strength.</p>
+
+			<p>We won our spot after pitching to eight toy companies at the Toy News Inventor’s Workshop last year. I
+			had about ten minutes to pitch to the professionals in a Dragon’s Den style event. It was a nerve&shy;wracking
+			but rewarding experience as Milo was shown off to the toy industry.</p>
+
+			<a href="">Read the story</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div id="blog-index">
+		<h2>Milo blog</h2>
+
+		<div class="inner">
+			{% for post in site.posts %}
+				<div class="post post-{{ forloop.index }}">
+					{% if forloop.index == 2 %}
+						<img alt="" src="images/posts/{{ post.image }}">
+					{% endif %}
+
+					<div class="text">
+						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						{{ post.excerpt | markdownify }}
+					</div>
+
+					{% if forloop.index != 2 %}
+						<img alt="" src="images/posts/{{ post.image }}">
+					{% endif %}
+					<div class="clearfix"></div>
+				</div>
+			{% endfor %}
+			<div class="clearfix"></div>
+		</div>
+
+		<a class="subscribe" href="/feed.xml">subscribe via RSS</a>
+	</div>
+
+	{% include _layouts/_as_seen.html %}
+</div>

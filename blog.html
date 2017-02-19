@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="passe-partout">
+	<div class="blog-index">
+		<h1>Milo blog</h1>
+		{% for post in site.posts %}
+			<div class="blog-index-post blog-index-post-{{ forloop.index }}">
+				<img alt="" src="images/posts/{{ post.excerptimage }}">
+				<div class="text">
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					{{ post.excerpt | markdownify }}
+				</div>
+			</div>
+		{% endfor %}
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+{% include _layouts/_about_hannah.html %}
